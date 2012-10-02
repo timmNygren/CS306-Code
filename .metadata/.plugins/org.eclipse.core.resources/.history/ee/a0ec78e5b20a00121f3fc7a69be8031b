@@ -1,0 +1,18 @@
+package test;
+
+import money.NegativeBalanceException;
+import money.Cashier;
+import org.junit.*;
+
+public class TestCashier {
+
+	@Test
+	public void testMakeChange() throws NegativeBalanceException {
+		
+		
+		
+		
+		//fail("Not yet implemented");
+	}
+
+}

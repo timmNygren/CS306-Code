@@ -1,0 +1,11 @@
+package money;
+
+public class Cashier {
+		
+		public Envelope makeChange() {
+			Envelope envelope = new Envelope();
+			
+			return envelope;
+		}
+		
+}

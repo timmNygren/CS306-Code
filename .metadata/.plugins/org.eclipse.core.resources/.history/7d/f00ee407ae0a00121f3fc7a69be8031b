@@ -1,0 +1,22 @@
+package test;
+
+import static org.junit.Assert.*;
+import org.junit.*;
+
+import money.Envelope;
+
+public class TestEnvelope {
+
+	@Test
+	public void testGetTotalCents() {
+		
+		Envelope testEnvelope = new Envelope(1, 4, 10, 20, 100);
+		double actual = testEnvelope.getTotalCents();
+		double expected = 500;
+		
+		Assert.assertEquals(expected, actual);
+		
+		fail("Not yet implemented");
+	}
+
+}

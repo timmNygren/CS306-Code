@@ -1,0 +1,18 @@
+
+public class FullNameException extends Exception{
+	private String name;
+
+	public FullNameException(String name) {
+		super();
+		this.name=name;
+	}
+	
+	@Override
+	public String toString() {
+		return name + " does not include a first and last name";
+	}
+	
+	/**
+	 * @param args
+	 */
+}

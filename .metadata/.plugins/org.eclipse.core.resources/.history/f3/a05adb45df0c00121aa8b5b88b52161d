@@ -1,0 +1,64 @@
+/*
+Comments
+1. For the HashMap, the output is dependent on the name, as the name is the key for the course favorite
+2. For the TreeMap, the output is in alphabetical order according to student names
+3. The error is: Cannot instantiate the type Map<String,String>
+The error is caused because Map is an interface class that describes the mapping, but the implementations
+of each type of Map are defined in other classes, such as the HashMap and TreeMap
+
+
+
+*/
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class MapSets {
+	Map<String, String> studentCourse;
+
+	public MapSets() {
+		studentCourse = new HashMap<String, String>();
+	}
+	
+	public void getStudentLikes() {
+		Scanner in = new Scanner(System.in);
+		String student = "";
+		String course = "";
+		
+		while(!(student.equalsIgnoreCase("Q"))) {
+			System.out.println("Enter a student name, press Q to quit: ");
+			student = in.next();
+			if (student.equalsIgnoreCase("Q")) {
+				break;
+			}
+			System.out.println("Enter the student's favorite course: ");
+			course = in.next();
+			
+			studentCourse.put(student, course);
+		}
+		
+	}
+	
+	public void printStudents() {
+		Set<String> keySet = studentCourse.keySet();
+		//Collection<String> collection = studentCourse.values(); 
+		for (String key : keySet)
+			//System.out.println();
+			System.out.println(key + " likes " + studentCourse.get(key));
+		
+		System.out.println();
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MapSets studentCourseLikes = new MapSets();
+		studentCourseLikes.getStudentLikes();
+		studentCourseLikes.printStudents();
+
+	}
+
+}
